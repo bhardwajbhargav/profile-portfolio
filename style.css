@@ -1,0 +1,237 @@
+/* ==========================================================
+   style.css - Portfolio styles
+   Sections: 1 Variables, 2 Base, 3 Navigation, 4 Hero,
+             5 Sections, 6 Components, 7 Footer, 8 Responsive
+   ========================================================== */
+
+/* 1. VARIABLES: change colours and fonts here */
+:root {
+  --bg: #0d131a;          /* page background */
+  --surface: #141c26;     /* raised areas */
+  --line: #263444;        /* borders */
+  --text: #e8ecf1;        /* main text */
+  --muted: #9aa8b8;       /* secondary text */
+  --accent: #8dbbee;      /* links and buttons */
+  --accent-dark: #0d131a; /* text on accent buttons */
+
+  --font-heading: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --header-height: 64px;
+}
+
+/* 2. BASE */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height); /* keeps headings clear of the fixed header */
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.2; margin: 0 0 0.75rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 500; }
+p  { margin: 0 0 1rem; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container { width: min(1000px, 100% - 3rem); margin-inline: auto; }
+.narrow    { max-width: 720px; margin-inline: 0; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--accent); color: var(--accent-dark);
+  padding: 0.5rem 1rem; border-radius: 6px; z-index: 200;
+}
+.skip-link:focus { top: 1rem; }
+
+/* 3. NAVIGATION */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--header-height);
+  background: rgba(13, 19, 26, 0.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  width: min(1000px, 100% - 3rem);
+  height: 100%;
+  margin-inline: auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 600; font-size: 1.15rem;
+  color: var(--text); text-decoration: none;
+}
+
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a {
+  color: var(--muted); text-decoration: none; font-size: 0.95rem;
+  padding: 0.25rem 0; border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); border-bottom-color: var(--accent); }
+
+/* Hamburger button (hidden on large screens) */
+.nav-toggle {
+  display: none;
+  background: none; border: 1px solid var(--line); border-radius: 8px;
+  width: 44px; height: 44px; cursor: pointer;
+  flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+}
+.nav-toggle .bar {
+  display: block; width: 20px; height: 2px; background: var(--text);
+  transition: transform 0.2s, opacity 0.2s;
+}
+/* Turn the bars into an X when the menu is open */
+.nav-toggle[aria-expanded="true"] .bar:nth-of-type(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bar:nth-of-type(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .bar:nth-of-type(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* 4. HERO */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: calc(var(--header-height) + 3rem) 0 4rem;
+  background:
+    radial-gradient(ellipse at 85% 10%, rgba(141, 187, 238, 0.09), transparent 55%),
+    var(--bg);
+}
+.hero-intro { color: var(--muted); margin-bottom: 0.5rem; }
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  animation: rise 0.8s ease both;   /* the one entrance animation on the page */
+}
+.hero-role { font-size: 1.2rem; max-width: 34ch; margin-bottom: 1.5rem; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-actions, .contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+/* 5. SECTIONS */
+.section { padding: 5rem 0; border-top: 1px solid var(--line); }
+.meta { color: var(--muted); font-size: 0.95rem; }
+
+/* 6. COMPONENTS */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  font: inherit; font-weight: 600; font-size: 0.95rem;
+  text-decoration: none; cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: var(--accent-dark); }
+.btn-primary:hover { background: #a9cdf5; }
+.btn-secondary { background: transparent; color: var(--accent); }
+.btn-secondary:hover { background: rgba(141, 187, 238, 0.12); }
+.btn-disabled {
+  border-style: dashed; border-color: var(--line);
+  color: var(--muted); font-weight: 400; cursor: not-allowed;
+}
+
+/* Tags and chips */
+.tags, .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags li, .chips li {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+/* Timeline (education and experience) */
+.timeline { border-left: 2px solid var(--line); margin-top: 1.5rem; }
+.timeline-item { position: relative; padding: 0 0 2rem 1.75rem; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: ""; position: absolute; left: -7px; top: 0.45rem;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--accent);
+}
+.timeline-item p { color: var(--muted); margin-bottom: 0.25rem; }
+.timeline-item h3 { color: var(--text); margin-bottom: 0.25rem; }
+.timeline-item .timeline-date { color: var(--accent); font-size: 0.9rem; }
+
+/* Skills */
+.skill-groups { display: grid; gap: 2rem; margin-top: 1.5rem; }
+.skill-group h3 { color: var(--muted); font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; }
+
+/* Projects */
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+.project-card.placeholder { border-style: dashed; }
+.placeholder-note { color: var(--muted); font-size: 0.9rem; margin: 1rem 0 0; }
+
+/* Certifications */
+.cert-list { margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.cert-list li { padding: 1rem 0; border-bottom: 1px solid var(--line); }
+
+/* 7. FOOTER */
+.site-footer { border-top: 1px solid var(--line); padding: 2rem 0; color: var(--muted); font-size: 0.9rem; }
+.site-footer p { margin: 0; }
+
+/* 8. RESPONSIVE: phones and small tablets */
+@media (max-width: 760px) {
+  .nav-toggle { display: flex; }
+
+  /* The menu becomes a dropdown panel under the header */
+  .nav-links {
+    display: none;
+    position: absolute; top: var(--header-height); left: 0; right: 0;
+    flex-direction: column; gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 0.5rem 1.5rem 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { display: block; padding: 0.75rem 0; font-size: 1.05rem; border-bottom: 0; }
+  .nav-links a.active { color: var(--accent); }
+
+  .section { padding: 3.5rem 0; }
+  .btn { width: 100%; text-align: center; }
+}
+
+/* Respect people who turn animations off in their system settings */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero h1 { animation: none; }
+  .nav-toggle .bar { transition: none; }
+}
