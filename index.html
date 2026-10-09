@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bharadwaj Bhargav Saikia | B.Tech CSE Student</title>
-  <meta name="description" content="Personal portfolio of Bharadwaj Bhargav Saikia, B.Tech Computer Science and Engineering student at Dhemaji Engineering College.">
+  <title>Bharadwaj Bhargav Saikia | CSE Student & Developer</title>
+  <meta name="description"
+    content="Personal portfolio of Bharadwaj Bhargav Saikia, B.Tech Computer Science and Engineering student at Dhemaji Engineering College.">
 
-  <!-- Fonts: if you are offline, the browser uses the fallback fonts set in style.css -->
+  <!-- Typography: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <a class="skip-link" href="#home">Skip to content</a>
+  <a class="skip-link" href="#home">Skip to main content</a>
+
+  <!-- Glow Backdrop Accents -->
+  <div class="bg-glow glow-1" aria-hidden="true"></div>
+  <div class="bg-glow glow-2" aria-hidden="true"></div>
 
   <!-- ================= NAVIGATION ================= -->
   <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="nav-brand" href="#home">Bharadwaj Saikia</a>
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="nav-brand" href="#home">
+        <span class="brand-code">&lt;/&gt;</span>
+        <span class="brand-text">Bharadwaj<span class="dot"></span></span>
+      </a>
 
-      <button class="nav-toggle" id="nav-toggle" type="button"
-              aria-expanded="false" aria-controls="nav-links">
-        <span class="visually-hidden">Toggle menu</span>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="visually-hidden">Toggle navigation menu</span>
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -35,233 +46,403 @@
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
 
-    <!-- ================= HOME ================= -->
+    <!-- ================= HERO ================= -->
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="container">
-        <p class="hero-intro">Hello, I am</p>
-        <h1 id="hero-title">Bharadwaj Bhargav Saikia</h1>
-        <p class="hero-role">B.Tech Computer Science and Engineering student at Dhemaji Engineering College</p>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="pulse-dot"></span>
+            B.Tech CSE Student @ DEC
+          </div>
 
-        <!-- These tags come from my LinkedIn headline -->
-        <ul class="tags" aria-label="Headline">
-          <li>Former Intern @ TRTC</li>
-          <li>C/C++</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>SQL</li>
-          <li>Python</li>
-          <li>DSA</li>
-          <li>AI/ML</li>
-          <li>Web Development</li>
-          <li>App Development</li>
-          <li>Software Development</li>
-        </ul>
+          <h1 id="hero-title">
+            Hi, I'm <span class="gradient-text">Bharadwaj Bhargav Saikia</span>
+          </h1>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View projects</a>
-          <a class="btn btn-secondary" href="#contact">Get in touch</a>
+          <p class="hero-role">
+            Computer Science &amp; Engineering Student at Dhemaji Engineering College
+          </p>
+
+          <p class="hero-bio">
+            Passionate about building scalable software solutions, exploring Data Structures &amp; Algorithms, and
+            delving into AI/ML and modern Web Development.
+          </p>
+
+          <div class="hero-tags" aria-label="Core competencies">
+            <span class="tag">C/C++</span>
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+            <span class="tag">DSA</span>
+            <span class="tag">AI/ML</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              Get In Touch
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/bharadwaj-bhargav-saikia" target="_blank"
+              rel="noopener noreferrer">
+              LinkedIn Profile
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal / Code Panel Visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">developer@bharadwaj:~</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+              <p class="response">Bharadwaj Bhargav Saikia</p>
+
+              <p><span class="prompt">$</span> <span class="cmd">cat education.json</span></p>
+              <p class="response json">{</p>
+              <p class="response json indent">"degree": "B.Tech CSE",</p>
+              <p class="response json indent">"college": "Dhemaji Engineering College",</p>
+              <p class="response json indent">"affiliation": "ASTU"</p>
+              <p class="response json">}</p>
+
+              <p><span class="prompt">$</span> <span class="cmd">echo $INTERESTS</span></p>
+              <p class="response">["Software Dev", "DSA", "Web Dev", "App Dev", "cloud computing", "AI/ML"]</p>
+
+              <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ================= ABOUT ================= -->
     <section class="section" id="about" aria-labelledby="about-title">
-      <div class="container narrow">
-        <h2 id="about-title">About me</h2>
-        <p>
-          I am a Computer Science and Engineering student pursuing my B.Tech at
-          Dhemaji Engineering College, affiliated with Assam Science and Technology
-          University (ASTU). My technical interests include Software Development,
-          Programming, Data Structures &amp; Algorithms, Web Development and
-          Artificial Intelligence, with hands-on knowledge of C, C++, Java, Python,
-          JavaScript, SQL and Microsoft Office (Word, Excel, PowerPoint).
-        </p>
-        <p>
-          I enjoy building practical projects, solving problems and exploring
-          technologies that turn ideas into useful solutions.
-        </p>
-        <p class="meta">Based in Dhemaji, Assam, India</p>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Overview</span>
+          <h2 id="about-title">About Me</h2>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="about-text">
+            <p>
+              I am a Computer Science and Engineering student currently pursuing my B.Tech degree at <strong>Dhemaji
+                Engineering College (DEC)</strong>, affiliated with Assam Science and Technology University (ASTU).
+            </p>
+            <p>
+              My core technical interests revolve around Software Development, Data Structures &amp; Algorithms, Web
+              Development and Artificial Intelligence. I am proficient in core languages such as C, C++, Java, Python,
+              JavaScript and SQL, alongside practical productivity suites.
+            </p>
+            <p>
+              I take pride in solving analytical problems, building functional software applications and constantly
+              expanding my technical capabilities through practical coursework and training.
+            </p>
+          </div>
+
+          <div class="about-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Dhemaji, Assam, India</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Current Status</span>
+              <span class="meta-value">B.Tech CSE Student</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">University</span>
+              <span class="meta-value">Assam Science and Technology University</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= EDUCATION ================= -->
     <section class="section" id="education" aria-labelledby="education-title">
-      <div class="container narrow">
-        <h2 id="education-title">Education</h2>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Academic Background</span>
+          <h2 id="education-title">Education</h2>
+        </div>
 
-        <!-- Education is a real timeline (newest first), so a list is the right structure -->
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-date">August 2026 to June 2029</p>
+        <div class="timeline">
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">August 2026 – June 2029</span>
+              <span class="timeline-badge">Current</span>
+            </div>
             <h3>Bachelor of Technology (B.Tech), Computer Science and Engineering</h3>
-            <p>Dhemaji Engineering College (DEC)</p>
-            <p>Affiliated with Assam Science and Technology University (ASTU), Guwahati</p>
-          </li>
+            <p class="institution">Dhemaji Engineering College (DEC)</p>
+            <p class="timeline-subtext">Affiliated with Assam Science and Technology University (ASTU), Guwahati</p>
+          </div>
 
-          <li class="timeline-item">
-            <p class="timeline-date">September 2023 to June 2026</p>
-            <h3>Diploma, Computer Science and Engineering</h3>
-            <p>Nalbari Polytechnic</p>
-          </li>
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">September 2023 – June 2026</span>
+            </div>
+            <h3>Diploma in Computer Science and Engineering</h3>
+            <p class="institution">Nalbari Polytechnic</p>
+          </div>
 
-          <li class="timeline-item">
-            <p class="timeline-date">June 2021 to May 2023</p>
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">June 2021 – May 2023</span>
+            </div>
             <h3>Higher Secondary (+2), Science</h3>
-            <p>Brilliant Academy, North Lakhimpur</p>
-          </li>
+            <p class="institution">Brilliant Academy, North Lakhimpur</p>
+          </div>
 
-          <li class="timeline-item">
-            <!-- The dates on my LinkedIn PDF for this entry look like a typing error,
-                 so no dates are shown. Add the correct dates here if you want them. -->
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">Completed</span>
+            </div>
             <h3>Matriculation (10th)</h3>
-            <p>Sankardev Shishu/Vidya Niketan, Nowboicha</p>
-          </li>
-        </ol>
+            <p class="institution">Sankardev Shishu/Vidya Niketan, Nowboicha</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= SKILLS ================= -->
     <section class="section" id="skills" aria-labelledby="skills-title">
-      <div class="container narrow">
-        <h2 id="skills-title">Technical skills</h2>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Technical Competencies</span>
+          <h2 id="skills-title">Skills &amp; Expertise</h2>
+        </div>
 
-        <div class="skill-groups">
-          <div class="skill-group">
-            <h3>Programming languages</h3>
-            <ul class="chips">
-              <li>C</li>
-              <li>C++</li>
-              <li>Java</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>SQL</li>
+        <div class="skills-grid">
+          <div class="skill-card glass-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Programming Languages</h3>
+            </div>
+            <ul class="skill-chips">
+              <li><span class="chip-dot"></span>C</li>
+              <li><span class="chip-dot"></span>C++</li>
+              <li><span class="chip-dot"></span>Java</li>
+              <li><span class="chip-dot"></span>Python</li>
+              <li><span class="chip-dot"></span>JavaScript</li>
+              <li><span class="chip-dot"></span>SQL</li>
             </ul>
           </div>
 
-          <div class="skill-group">
-            <h3>Microsoft Office</h3>
-            <ul class="chips">
-              <li>Word</li>
-              <li>Excel</li>
-              <li>PowerPoint</li>
+          <div class="skill-card glass-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3>Core Domains</h3>
+            </div>
+            <ul class="skill-chips">
+              <li><span class="chip-dot"></span>Software Development</li>
+              <li><span class="chip-dot"></span>Data Structures &amp; Algorithms</li>
+              <li><span class="chip-dot"></span>Web Development</li>
+              <li><span class="chip-dot"></span>Artificial Intelligence</li>
+              <li><span class="chip-dot"></span>Machine Learning</li>
             </ul>
           </div>
 
-          <div class="skill-group">
-            <h3>Areas of interest</h3>
-            <ul class="chips">
-              <li>Software Development</li>
-              <li>Data Structures &amp; Algorithms</li>
-              <li>Web Development</li>
-              <li>Artificial Intelligence</li>
+          <div class="skill-card glass-card">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3>Tools &amp; Productivity</h3>
+            </div>
+            <ul class="skill-chips">
+              <li><span class="chip-dot"></span>Microsoft Word</li>
+              <li><span class="chip-dot"></span>Microsoft Excel</li>
+              <li><span class="chip-dot"></span>Microsoft PowerPoint</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ================= PROJECTS ================= -->
-    <section class="section" id="projects" aria-labelledby="projects-title">
-      <div class="container narrow">
-        <h2 id="projects-title">Projects</h2>
-        <p>My LinkedIn profile does not list any projects yet, so this section is waiting for real ones.</p>
-
-        <!--
-          HOW TO ADD A PROJECT:
-          1. Copy the whole <article class="project-card"> block below.
-          2. Replace the title, description and technologies with your real details.
-          3. Add a link only if you know the real URL, for example:
-             <a class="btn btn-secondary" href="https://github.com/your-username/your-repo">View on GitHub</a>
-          4. Delete the "placeholder" class and the placeholder note when finished.
-        -->
-        <article class="project-card placeholder">
-          <h3>Project title (edit me)</h3>
-          <p>Write one or two sentences about what the project does and what you built.</p>
-          <ul class="chips">
-            <li>Technology 1</li>
-            <li>Technology 2</li>
-          </ul>
-          <p class="placeholder-note">Placeholder: replace with a real project.</p>
-        </article>
       </div>
     </section>
 
     <!-- ================= EXPERIENCE ================= -->
     <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="container narrow">
-        <h2 id="experience-title">Experience</h2>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Career Journey</span>
+          <h2 id="experience-title">Experience</h2>
+        </div>
 
-        <ol class="timeline">
-          <li class="timeline-item">
-            <p class="timeline-date">August 2026 to present</p>
+        <div class="timeline">
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">August 2026 – Present</span>
+              <span class="timeline-badge">Active</span>
+            </div>
             <h3>Student</h3>
-            <p>Dhemaji Engineering College (DEC), Dhemaji</p>
-          </li>
-        </ol>
+            <p class="institution">Dhemaji Engineering College (DEC), Dhemaji</p>
+            <p class="timeline-subtext">Pursuing B.Tech curriculum in Computer Science and Engineering.</p>
+          </div>
 
-        <!--
-          My LinkedIn headline says "Former Intern @ TRTC", but the PDF has no
-          internship details. Add the role, dates and what you did below when you
-          have them. Copy the <li> above and edit it.
-        -->
+          <div class="timeline-item glass-card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-header">
+              <span class="timeline-date">Former Intern</span>
+            </div>
+            <h3>Internship</h3>
+            <p class="institution">Tool Room &amp; Training Centre (TRTC)</p>
+            <p class="timeline-subtext">Completed technical industrial exposure training as part of engineering
+              curriculum.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= CERTIFICATIONS ================= -->
     <section class="section" id="certifications" aria-labelledby="certifications-title">
-      <div class="container narrow">
-        <h2 id="certifications-title">Certifications</h2>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Credentials</span>
+          <h2 id="certifications-title">Certifications</h2>
+        </div>
 
-        <!-- Only the certificate names are on my LinkedIn PDF. Add issuer, date
-             or a credential link to each item only if you have the real details. -->
-        <ul class="cert-list">
-          <li>Explore prebuilt Microsoft Copilot agents</li>
-          <li>Code Generation and Optimization Using IBM Granite</li>
-          <li>AI Fundamentals: Foundations for Understanding AI</li>
-        </ul>
+        <div class="cert-grid">
+          <!-- Card 1 -->
+          <div class="cert-card glass-card">
+          
+            <div class="cert-preview-wrapper">
+              <img src="certificates/Achievements microsoft.jpg" alt="Microsoft Copilot Agents Certificate" class="cert-img">
+            </div>
+          
+            <div class="cert-body">
+              <span class="cert-issuer">Microsoft</span>
+              <h3>Explore Prebuilt Microsoft Copilot Agents</h3>
+              <div class="cert-actions">
+                <!-- CONFIGURABLE: Replace "assets/certificates/copilot-agents.pdf" with your actual file path once added -->
+              
+                <a class="btn btn-secondary" href="certificates/Achievements microsoft.jpg" target="_blank" rel="noopener noreferrer">
+                  View Certificate
+                </a>
+            
+                <!-- CONFIGURABLE: To add an official verification link, uncomment and edit the line below:
+                <a class="btn-link-simple" href="YOUR_OFFICIAL_VERIFICATION_URL" target="_blank" rel="noopener noreferrer">Verify Credential &rarr;</a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="cert-card glass-card">
+            <div class="cert-preview-wrapper">
+              <img src="certificates/IBMDesign.jpg" alt="IBM Granite Certificate" class="cert-img">
+            </div>
+          
+            <div class="cert-body">
+              <span class="cert-issuer">IBM</span>
+              <h3>Code Generation and Optimization Using IBM Granite</h3>
+              <div class="cert-actions">
+                <!-- CONFIGURABLE: Replace "assets/certificates/ibm-granite.pdf" with actual file path -->
+                <a class="btn btn-secondary btn-sm" href="certificates/IBMDesign.jpg" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                    <circle cx="12" cy="12" r="3" />
+                  </svg>
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="cert-card glass-card">
+          
+            <div class="cert-preview-wrapper">
+              <img src="certificates/AIFundamentalsFoundationsforUnderstandingAI_Badge.jpg" alt="AI Fundamentals Certificate" class="cert-img">
+            </div>
+            
+            <div class="cert-body">
+              <span class="cert-issuer">AI Certification Program</span>
+              <h3>AI Fundamentals: Foundations for Understanding AI</h3>
+              <div class="cert-actions">
+                <!-- CONFIGURABLE: Replace "assets/certificates/ai-fundamentals.pdf" with actual file path -->
+              
+                <a class="btn btn-secondary" href="certificates/AIFundamentalsFoundationsforUnderstandingAI_Badge.jpg" target="_blank" rel="noopener noreferrer">
+                  View Certificate
+                </a>
+        
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
     <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container narrow">
-        <h2 id="contact-title">Contact</h2>
-        <p>The best way to reach me is through LinkedIn.</p>
+      <div class="container">
+        <div class="contact-card glass-card">
+          <div class="contact-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 id="contact-title">Let's Connect</h2>
+            <p>I am open to discuss software engineering opportunities, tech collaborations or academic inquiries.</p>
+          </div>
 
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/bharadwajbhargav-saikia"
-             target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
-
-          <!-- GitHub URL is not known yet. When you create your repository, replace
-               this <span> with:
-               <a class="btn btn-secondary" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener noreferrer">GitHub profile</a> -->
-          <span class="btn btn-disabled" aria-disabled="true">GitHub link: add after you create your profile</span>
+          <div class="contact-actions-wrapper">
+            <a class="btn btn-primary btn-large" href="https://www.linkedin.com/in/bharadwaj-bhargav-saikia"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69
+              Connect on LinkedIn
+            </a>
+          </div>
         </div>
-
-        <!-- Email is intentionally not shown, to keep personal details private.
-             If you decide to show it, add a line here:
-             <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p> -->
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year">2026</span> Bharadwaj Bhargav Saikia</p>
+    <div class="container footer-content">
+      <p>&copy; <span id="year">2026</span> Bharadwaj Bhargav Saikia. All rights reserved.</p>
+      <p class="footer-subtext">Built with HTML5, CSS3 &amp; Vanilla JavaScript</p>
     </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
